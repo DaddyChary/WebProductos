@@ -1,0 +1,601 @@
+12-Jun-2024 01:34:31.442 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+12-Jun-2024 01:34:31.442 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+12-Jun-2024 01:34:31.444 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@450794b4')
+12-Jun-2024 01:34:35.813 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/WebApp] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [14] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved to a type
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+102:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [14] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved to a type
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+102:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:553)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1570)
+12-Jun-2024 01:43:40.013 SEVERE [http-nio-8080-exec-19] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/WebApp] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [14] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved to a type
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+102:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [14] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved to a type
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [45] en el archivo jsp: [/index.jsp]
+ConexionSingleton cannot be resolved
+42:     </head>
+43:     <body>
+44:         <%@include file="Layouts/nav.jsp"%>
+45:         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
+46:         <main>
+47:             <div class="container">
+48:                 <div class="row">
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [97] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+94:                                         </thead>
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+
+
+Ha tenido lugar un error en la línea: [98] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+95:                                         <tbody>
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [99] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+96:                                             <%
+97:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+98:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+99:                                                 for (Producto oProducto : oList) {
+100:                                             %>
+101:                                             <tr>
+102:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:553)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1570)
+12-Jun-2024 01:45:49.064 SEVERE [http-nio-8080-exec-56] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/WebApp] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [16] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [19] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+oConexionSingleton cannot be resolved to a variable
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [103] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+106:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [104] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+106:                                             <tr>
+107:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [15] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [16] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [19] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+Dao_Producto cannot be resolved to a type
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [102] en el archivo jsp: [/index.jsp]
+oConexionSingleton cannot be resolved to a variable
+99:                                         </thead>
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+
+
+Ha tenido lugar un error en la línea: [103] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+100:                                         <tbody>
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+106:                                             <tr>
+
+
+Ha tenido lugar un error en la línea: [104] en el archivo jsp: [/index.jsp]
+Producto cannot be resolved to a type
+101:                                             <%
+102:                                                 Dao_Producto oDao_Producto = new Dao_Producto(oConexionSingleton);
+103:                                                 List<Producto> oList = oDao_Producto.getAll().get();
+104:                                                 for (Producto oProducto : oList) {
+105:                                             %>
+106:                                             <tr>
+107:                                                 <td><%= oProducto.getId()%></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:553)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1570)
+12-Jun-2024 01:48:07.248 SEVERE [http-nio-8080-exec-48] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [jsp] en el contexto con ruta [/WebApp] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [17] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [21] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [17] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. model.Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [18] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. service.Dao_Profesor resolves to a package
+
+Ha tenido lugar un error en la línea: [21] en el fichero java generado: [C:\Users\DaddyChary\Documents\carrera\patrones\WebProductos\apache-tomcat-9.0.89\work\Catalina\localhost\WebApp\org\apache\jsp\index_jsp.java]
+Only a type can be imported. db.ConexionSingleton resolves to a package
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:553)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1570)
+12-Jun-2024 01:54:30.537 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+12-Jun-2024 01:54:30.537 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
