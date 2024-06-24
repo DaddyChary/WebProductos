@@ -33,7 +33,33 @@
         </style>
     </head>
     <body>
-        <%@include file="../Layouts/nav.jsp"%>
+        <header>
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a href="#" class="brand-logo">Productos</a>
+                        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="../Controller_Logout.do">Logout</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-menu">
+                            <li>
+                                <div class="userView">
+                                    <div class="background">
+                                        <img src="http://lorempixel.com/output/abstract-q-c-640-480-10.jpg" alt="Background Sidenav">
+                                    </div>
+                                    <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                                </div>
+                            </li>
+                            <li><a href="#">item1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
         <main>
             <div class="container">
@@ -44,7 +70,7 @@
                                 <h4>Crear Producto</h4>
                                 <div class="row">
                                     <div class="row">
-                                        <form action="insertProduct" method="post" class="col s12">
+                                        <form action="../insertProduct" method="post" class="col s12">
                                             <div class="row">
                                                 <div class="input-field col s6">
                                                     <input id="nombre" name="nombre" type="text" class="validate" required>
@@ -112,7 +138,7 @@
                             <div class="card-content">
                                 <h4>Actualizar Productos</h4>
                                 <div class="row">
-                                    <form action="updateProduct" method="post" class="col s12">
+                                    <form action="../updateProduct" method="post" class="col s12">
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <input id="id" name="id" type="text" class="validate" required>
@@ -139,13 +165,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col s12 m6 l6">
                         <div class="card-panel">
                             <div class="card-content">
                                 <h4>Eliminar Producto</h4>
                                 <div class="row">
-                                    <form action="deleteProduct" method="post" class="col s12">
+                                    <form action="../deleteProduct" method="post" class="col s12">
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <input id="id" name="id" type="text" class="validate" required>

@@ -17,18 +17,20 @@ import model.Usuario;
  *
  * @author DaddyChary
  */
-public class Dao_Usuarios implements CRUD<Usuario> {
+public class Dao_Usuario implements CRUD<Usuario> {
 
     private ConexionSingleton oConexionSingleton;
 
-    public Dao_Usuarios(ConexionSingleton oConexionSingleton) {
+    public Dao_Usuario(ConexionSingleton oConexionSingleton) {
         this.oConexionSingleton = oConexionSingleton;
     }
 
     @Override
     public void insert(Usuario obj) {
+//        String sql = "INSERT INTO usuarios (id, nombre, apellido, correo, password, tipo_usuario) VALUES "
+//                + "(null, '" + obj.getNombre() + "', '" + obj.getApellido() + "', '" + obj.getCorreo() + "',sha2('" + obj.getPassword() + "',0),'" + obj.getTipo_usuario() + ")";
         String sql = "INSERT INTO usuarios (id, nombre, apellido, correo, password, tipo_usuario) VALUES "
-                + "(null, '" + obj.getNombre() + "', '" + obj.getApellido() + "', '" + obj.getCorreo() + "',sha2('" + obj.getPassword() + "',0),'" + obj.getTipo_usuario() + ")";
+                + "(null, '" + obj.getNombre() + "', '" + obj.getApellido() + "', '" + obj.getCorreo() + "', '" + obj.getPassword() + "', '" + obj.getTipo_usuario() + ")";
         try {
             oConexionSingleton.getConnection().createStatement().execute(sql);
         } catch (SQLException e) {
@@ -63,7 +65,7 @@ public class Dao_Usuarios implements CRUD<Usuario> {
 
     @Override
     public void update(Usuario obj) {
-        String sql = "UPDATE usuarios SET nombre = '" + obj.getNombre() + "', apellido = '" + obj.getApellido() + "', correo ='" + obj.getCorreo() + "', password=sha2 ('" + obj.getPassword() + "',0);"
+        String sql = "UPDATE usuarios SET nombre = '" + obj.getNombre() + "', apellido = '" + obj.getApellido() + "', correo ='" + obj.getCorreo() + "', password = '" + obj.getPassword() + "'"
                 + "tipo_usuario = " + obj.getTipo_usuario() + "  WHERE id = " + obj.getId() + "";
         try {
             oConexionSingleton.getConnection().createStatement().execute(sql);
@@ -90,7 +92,7 @@ public class Dao_Usuarios implements CRUD<Usuario> {
     }
 
     public Usuario isExist(Usuario oUsuario) {
-        String sql = "SELECT * FROM usuarios WHERE rut='" + oUsuario.getNombre() + "' AND password=sha2('" + oUsuario.getPassword() + "',0);";
+        String sql = "SELECT * FROM usuarios WHERE nombre = '"+ oUsuario.getNombre() +"' AND password = '"+ oUsuario.getPassword() +"'";
         try {
             ResultSet oResultSet = oConexionSingleton.getConnection().createStatement().executeQuery(sql);
             if (oResultSet.next()) {

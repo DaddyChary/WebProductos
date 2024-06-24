@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import service.Dao_Producto;
 import db.ConexionSingleton;
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Producto;
+import service.Dao_Producto;
 
 @WebServlet("/deleteProduct")
 public class DeleteProductServlet extends HttpServlet {
@@ -27,6 +28,6 @@ public class DeleteProductServlet extends HttpServlet {
 
         oDao_Producto.delete(nuevoProducto);
 
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("Pages/Home.jsp");
     }
 }

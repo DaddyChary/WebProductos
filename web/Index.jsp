@@ -32,7 +32,32 @@
         </style>
     </head>
     <body>
-        <%@include file="Layouts/nav.jsp"%>
+        <header>
+            <nav class="cyan">
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a href="#" class="brand-logo">Productos</a>
+                        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#">Home</a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-menu">
+                            <li>
+                                <div class="userView">
+                                    <div class="background">
+                                        <img src="http://lorempixel.com/output/abstract-q-c-640-480-10.jpg" alt="Background Sidenav">
+                                    </div>
+                                    <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                                    <a href="#!name"><span class="white-text name">John Doe</span></a>
+                                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                                </div>
+                            </li>
+                            <li><a href="#">item1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <main>
             <div class="container">
                 <div class="row">
@@ -41,16 +66,16 @@
                             <div class="card-content">
                                 <h4 class="center-align">Login</h4>
                                 <div class="row">
-                                    <form action="login" method="post" class="col s12">
+                                    <form action="Controller_Login.do" method="post" class="col s12">
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="username" name="username" type="text" class="validate" required>
+                                                <input id="username" name="txt_username" type="text" class="validate" required>
                                                 <label for="username">Nombre de Usuario</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="password" name="password" type="password" class="validate" required>
+                                                <input id="password" name="txt_password" type="password" class="validate" required>
                                                 <label for="password">Contraseña</label>
                                             </div>
                                         </div>
@@ -60,6 +85,14 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <%
+                                        String error = request.getParameter("error");
+                                        if (error != null) {
+                                    %>
+                                    <p style="color: red;">Credenciales invalidas intentalo denuevo</p>
+                                    <%
+                                        }
+                                    %>
                                 </div>
                             </div>
                         </div>

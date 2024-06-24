@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import service.Dao_Producto;
 import db.ConexionSingleton;
@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.Dao_Producto;
 
 @WebServlet("/updateProduct")
 public class UpdateProductServlet extends HttpServlet {
@@ -34,7 +35,7 @@ public class UpdateProductServlet extends HttpServlet {
 
             oDao_Producto.update(producto);
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("Pages/Home.jsp");
         /*} catch (Exception e) {
             e.printStackTrace();
             response.sendRedirect("error.jsp");

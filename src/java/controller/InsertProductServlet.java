@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service;
+package controller;
 
 import db.ConexionSingleton;
 import service.Dao_Producto;
@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.Dao_Producto;
 
 @WebServlet("/insertProduct")
 public class InsertProductServlet extends HttpServlet {
@@ -35,6 +36,6 @@ public class InsertProductServlet extends HttpServlet {
 
         oDao_Producto.insert(nuevoProducto);
 
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("Pages/Home.jsp");
     }
 }
