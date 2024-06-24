@@ -59,7 +59,6 @@ public class Dao_Producto implements CRUD<Producto> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return Optional.empty();
     }
 

@@ -1,5 +1,3 @@
-
-
 <%@page import="model.Producto"%>
 <%@page import="service.Dao_Producto"%>
 <%@page import="java.util.Optional"%>
@@ -35,7 +33,7 @@
         </style>
     </head>
     <body>
-        <%@include file="Layouts/nav.jsp"%>
+        <%@include file="../Layouts/nav.jsp"%>
         <%ConexionSingleton oConexionSingleton = ConexionSingleton.getIntance();%>
         <main>
             <div class="container">
@@ -69,7 +67,6 @@
                                     <!--<img src="IMG/Create.jpg">-->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="col s12 m6 l6">
@@ -166,7 +163,7 @@
                 </div>
             </div>
         </main>
-        <%@include file="Layouts/footer.jsp" %>
+        <%@include file="../Layouts/footer.jsp" %>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <!-- Materialize JS CDN -->
