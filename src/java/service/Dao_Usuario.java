@@ -27,8 +27,6 @@ public class Dao_Usuario implements CRUD<Usuario> {
 
     @Override
     public void insert(Usuario obj) {
-//        String sql = "INSERT INTO usuarios (id, nombre, apellido, correo, password, tipo_usuario) VALUES "
-//                + "(null, '" + obj.getNombre() + "', '" + obj.getApellido() + "', '" + obj.getCorreo() + "',sha2('" + obj.getPassword() + "',0),'" + obj.getTipo_usuario() + ")";
         String sql = "INSERT INTO usuarios (id, nombre, apellido, correo, password, tipo_usuario) VALUES "
                 + "(null, '" + obj.getNombre() + "', '" + obj.getApellido() + "', '" + obj.getCorreo() + "', '" + obj.getPassword() + "', '" + obj.getTipo_usuario() + ")";
         try {
@@ -65,8 +63,8 @@ public class Dao_Usuario implements CRUD<Usuario> {
 
     @Override
     public void update(Usuario obj) {
-        String sql = "UPDATE usuarios SET nombre = '" + obj.getNombre() + "', apellido = '" + obj.getApellido() + "', correo ='" + obj.getCorreo() + "', password = '" + obj.getPassword() + "'"
-                + "tipo_usuario = " + obj.getTipo_usuario() + "  WHERE id = " + obj.getId() + "";
+        String sql = "UPDATE usuarios SET nombre = '" + obj.getNombre() + "', apellido = '" + obj.getApellido() + "', correo ='" + obj.getCorreo() +
+                "', password = '" + obj.getPassword() + "', tipo_usuario = " + obj.getTipo_usuario() + "  WHERE id = " + obj.getId() + "";
         try {
             oConexionSingleton.getConnection().createStatement().execute(sql);
         } catch (SQLException e) {
